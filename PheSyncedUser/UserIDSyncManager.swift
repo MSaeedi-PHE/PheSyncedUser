@@ -25,11 +25,13 @@ public class UserIDSyncManager: IDSyncManagerType {
 
     public private(set) var userId: String?
 
+    public init() { }
+
     public func syncId() -> String? {
         userId = retrieveId()
         if userId == nil {
             let generatedId = UUID().uuidString
-            let status = save(id: generatedId)
+            let status = save(userId: generatedId)
             guard status == errSecSuccess else { return nil }
             debugPrint("generated and synced new user id")
             userId = generatedId
@@ -50,8 +52,8 @@ public class UserIDSyncManager: IDSyncManagerType {
 }
 
 private extension UserIDSyncManager {
-    private func save(id: String) -> OSStatus {
-        let idData = id.data(using: .utf8)
+    private func save(userId: String) -> OSStatus {
+        let idData = userId.data(using: .utf8)
         guard let id = idData else { return errSecInvalidData }
         let attributes = [kSecClass: kSecClassGenericPassword,
                           kSecAttrService: defaultServiceId,
