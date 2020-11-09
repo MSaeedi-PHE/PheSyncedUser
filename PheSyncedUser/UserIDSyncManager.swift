@@ -56,9 +56,13 @@ public class IDSecureStore: IDSecureStoreType {
 
     private let userIDKey = "userID"
     private let defaultServiceId = "com.phe.securestore"
-    private let sharedAccessGroup = "6KQH7L94KJ.com.phe.sharedAccess"
+    private let accessGroup = "com.phe.sharedAccess"
 
-    public init() { }
+    private let sharedAccessGroup: String
+
+    public init(with teamId: String = "6KQH7L94KJ") {
+        sharedAccessGroup = "\(teamId).\(accessGroup)"
+    }
 
     public func save(userId: String) -> OSStatus {
         guard let idData = userId.data(using: .utf8) else { return errSecInvalidData }
