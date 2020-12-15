@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D084FEE2253063A8000021FA /* PheSyncedUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D084FED8253063A8000021FA /* PheSyncedUser.framework */; };
-		D084FEE7253063A8000021FA /* PheSyncedUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084FEE6253063A8000021FA /* PheSyncedUserTests.swift */; };
+		D084FEE7253063A8000021FA /* UserIDSyncManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084FEE6253063A8000021FA /* UserIDSyncManagerTests.swift */; };
 		D084FEE9253063A8000021FA /* PheSyncedUser.h in Headers */ = {isa = PBXBuildFile; fileRef = D084FEDB253063A8000021FA /* PheSyncedUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D084FEF325306401000021FA /* UserIDSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084FEF225306401000021FA /* UserIDSyncManager.swift */; };
 		D0961610254C45C1002CA227 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D096160F254C45C1002CA227 /* README.md */; };
+		D0E8BF6E25599B450042F79C /* MockIDSecureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8BF6D25599B450042F79C /* MockIDSecureStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,10 +30,11 @@
 		D084FEDB253063A8000021FA /* PheSyncedUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PheSyncedUser.h; sourceTree = "<group>"; };
 		D084FEDC253063A8000021FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D084FEE1253063A8000021FA /* PheSyncedUserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PheSyncedUserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D084FEE6253063A8000021FA /* PheSyncedUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PheSyncedUserTests.swift; sourceTree = "<group>"; };
+		D084FEE6253063A8000021FA /* UserIDSyncManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDSyncManagerTests.swift; sourceTree = "<group>"; };
 		D084FEE8253063A8000021FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D084FEF225306401000021FA /* UserIDSyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserIDSyncManager.swift; sourceTree = "<group>"; };
 		D096160F254C45C1002CA227 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		D0E8BF6D25599B450042F79C /* MockIDSecureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockIDSecureStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +88,19 @@
 		D084FEE5253063A8000021FA /* PheSyncedUserTests */ = {
 			isa = PBXGroup;
 			children = (
-				D084FEE6253063A8000021FA /* PheSyncedUserTests.swift */,
+				D0E8BF6C25599B1C0042F79C /* Mock */,
+				D084FEE6253063A8000021FA /* UserIDSyncManagerTests.swift */,
 				D084FEE8253063A8000021FA /* Info.plist */,
 			);
 			path = PheSyncedUserTests;
+			sourceTree = "<group>";
+		};
+		D0E8BF6C25599B1C0042F79C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				D0E8BF6D25599B450042F79C /* MockIDSecureStore.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +222,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D084FEE7253063A8000021FA /* PheSyncedUserTests.swift in Sources */,
+				D084FEE7253063A8000021FA /* UserIDSyncManagerTests.swift in Sources */,
+				D0E8BF6E25599B450042F79C /* MockIDSecureStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

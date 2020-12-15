@@ -7,7 +7,7 @@ s.name = "PheSyncedUser"
 s.summary = "PheSyncedUser creates a unique id for user and syncs it across all PHE apps."
 s.requires_arc = true
 
-s.version = "1.0.0"
+s.version = "1.0"
 s.license = { :type => "MIT" }
 s.author = { "Mohamad Saeedi" => "mo.saeedi@phe.gov.uk" }
 s.homepage = "https://github.com/MSaeedi-PHE/PheSyncedUser/"
